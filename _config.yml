@@ -53,6 +53,9 @@ collections:
 exclude:
   - obsidian_vault
   - scripts
+  - vendor
+  - Gemfile
+  - Gemfile.lock
 
 
 # Exclude from processing.
