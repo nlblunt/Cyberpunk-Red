@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<article class="post session-recap">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+        <div class="meta-details cyber-panel">
+            <p><strong>Real Date:</strong> {{ page.real_date | date: "%m/%d/%Y" }}</p>
+            <p><strong>In-Game Date:</strong> {{ page.in_game_date | date: "%m/%d/%Y" }}</p>
+            <p><strong>Mission:</strong>
+                {% if page.mission.size > 0 %}
+                {{ page.mission | join: ", " }}
+                {% else %}
+                {{ page.mission }}
+                {% endif %}
+            </p>
+        </div>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+</article>
+
+<style>
+    .meta-details {
+        background: rgba(0, 0, 0, 0.5);
+        border-left: 4px solid var(--accent-color, #00ff00);
+        padding: 1rem;
+        margin-bottom: 2rem;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .meta-details p {
+        margin: 0.5rem 0;
+    }
+</style>
