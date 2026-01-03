@@ -28,7 +28,7 @@ def process_file(filepath):
                     hidden_level = None
             
             # Check if this new header is start of a secret section
-            if "#secret" in line:
+            if "#secret" in line or "GM Notes" in line:
                 hidden_level = level
                 continue # Don't write this line
                 
