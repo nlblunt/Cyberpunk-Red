@@ -1,10 +1,39 @@
 ---
 layout: corporation
 title: Aether Materials Dynamics
+known: false
+discovered_details:
+  - label: "Security"
+    value: 0
+    max: 10
+    note: ""
+    is_unknown: true
+  - label: "Police response time"
+    value: 0
+    max: 10
+    note: ""
+    is_unknown: true
+  - label: "Revenue"
+    value: 0
+    max: 10
+    note: ""
+    is_unknown: true
+  - label: "Resources"
+    value: 0
+    max: 10
+    note: ""
+    is_unknown: true
+  - label: "Players Reputation"
+    value: 0
+    max: 10
+    note: ""
+    is_unknown: true
 ---
-
 # Aether Materials Dynamics
 **Aether Materials Dynamics (AMD)** is a newly established Neocorp focused on rapid urban development solutions. They are moving into Night City to take advantage of the massive rebuilding effort following the [Night City Holocaust of 2023]({% link _lore/Night City Holocaust of 2023.md %}).
+
+{% include discovered_details.html %}
+
 
 ## Corporate Profile
 - **Industry Focus:** Specialized modular construction materials and rapid-deployment infrastructure. 

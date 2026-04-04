@@ -1,0 +1,109 @@
+Player Reputation:
+  0: '**0-1: Kill on Sight.** You are an active threat to corporate trade secrets;
+    assassins are likely already en route.'
+  1: '**0-1: Kill on Sight.** You are an active threat to corporate trade secrets;
+    assassins are likely already en route.'
+  2: '**2-3: Hostile/Deceived.** Managers like **Max Kruger** react negatively and
+    will lie to your face to hinder your investigation.'
+  3: '**2-3: Hostile/Deceived.** Managers like **Max Kruger** react negatively and
+    will lie to your face to hinder your investigation.'
+  4: '**4-5: Neutral Asset.** You are "external help" or a mercenary being tested
+    for "loyalty and ruthlessness".'
+  5: '**4-5: Neutral Asset.** You are "external help" or a mercenary being tested
+    for "loyalty and ruthlessness".'
+  6: '**6-7: Trusted Contractor.** The corporation trusts you with sensitive "headhunting
+    runs" or database sabotage.'
+  7: '**6-7: Trusted Contractor.** The corporation trusts you with sensitive "headhunting
+    runs" or database sabotage.'
+  8: '**8-9: Team Member.** You are integrated into the "Exec Team," receiving perks
+    like corporate conapts or high-end lifestyle prepaks.'
+  9: '**8-9: Team Member.** You are integrated into the "Exec Team," receiving perks
+    like corporate conapts or high-end lifestyle prepaks.'
+  10: '**10: Inner Circle.** You report directly to the "Face," like **Dr. Kaine**,
+    helping her achieve the "Stay Hungry" ethos of corporate domination.'
+Police Response Time:
+  0: '**0-1: The Void.** Law enforcement will never come; you are in a deep "Combat
+    Zone".'
+  1: '**0-1: The Void.** Law enforcement will never come; you are in a deep "Combat
+    Zone".'
+  2: '**2-3: Apathetic.** Local beat cops arrive in 1d6 hours, usually just to bag
+    the bodies.'
+  3: '**2-3: Apathetic.** Local beat cops arrive in 1d6 hours, usually just to bag
+    the bodies.'
+  4: "**4-5: Standard Urban.** Response within 10\u201320 minutes. Just enough time\
+    \ for a party to slip out a back exit unnoticed."
+  5: "**4-5: Standard Urban.** Response within 10\u201320 minutes. Just enough time\
+    \ for a party to slip out a back exit unnoticed."
+  6: "**6-7: Corporate Fringe.** Response within 5\u20138 minutes. Higher urgency\
+    \ due to being near corporate property or \"Yellow Zones\"."
+  7: "**6-7: Corporate Fringe.** Response within 5\u20138 minutes. Higher urgency\
+    \ due to being near corporate property or \"Yellow Zones\"."
+  8: "**8-9: Priority Area.** Rapid deployment (2\u20135 minutes) involving \"County\
+    \ Mounties\" or high-performance groundcars."
+  9: "**8-9: Priority Area.** Rapid deployment (2\u20135 minutes) involving \"County\
+    \ Mounties\" or high-performance groundcars."
+  10: '**10: Instant Extraction.** Targeted deployment in under 60 seconds via AV-4.
+    This is the luxury protection enjoyed by **Dr. Vivian Kaine** in the Upper Marina.'
+Resources:
+  0: '**0-1: Obsolete.** Relying on pre-War junk and outdated databases.'
+  1: '**0-1: Obsolete.** Relying on pre-War junk and outdated databases.'
+  2: '**2-3: Basic Utility.** Access to standard chemicals, simple employee files,
+    and basic identification badges.'
+  3: '**2-3: Basic Utility.** Access to standard chemicals, simple employee files,
+    and basic identification badges.'
+  4: '**4-5: Specialized R&D.** Deep knowledge in specific fields like "logistical
+    control" or "materials science".'
+  5: '**4-5: Specialized R&D.** Deep knowledge in specific fields like "logistical
+    control" or "materials science".'
+  6: '**6-7: Covert Assets.** Commands specialized teams like covert Netrunners or
+    assassins for "headhunting runs".'
+  7: '**6-7: Covert Assets.** Commands specialized teams like covert Netrunners or
+    assassins for "headhunting runs".'
+  8: '**8-9: Experimental Tech.** Searching for or developing "game-changing" tools,
+    such as the **cybertech virus** rumors.'
+  9: '**8-9: Experimental Tech.** Searching for or developing "game-changing" tools,
+    such as the **cybertech virus** rumors.'
+  10: '**10: World-Defining.** Controls technology that can remotely control anyone
+    with cyberware, granting unparalleled market dominance.'
+Revenue:
+  0: '**0-1: Bankrupt.** Scavenging for scrap to keep the lights on; no payroll.'
+  1: '**0-1: Bankrupt.** Scavenging for scrap to keep the lights on; no payroll.'
+  2: '**2-3: Small Firm.** A local niche business, like **Neuro-Chem Labs**, with
+    a single office and limited staff.'
+  3: '**2-3: Small Firm.** A local niche business, like **Neuro-Chem Labs**, with
+    a single office and limited staff.'
+  4: '**4-5: Emerging Neocorp.** Stable and profitable. Currently where **AMD** sits
+    as a "Materials Science" firm seeking a permanent foothold.'
+  5: '**4-5: Emerging Neocorp.** Stable and profitable. Currently where **AMD** sits
+    as a "Materials Science" firm seeking a permanent foothold.'
+  6: '**6-7: Market Competitor.** Offers "Trauma Team Silver" and corporate housing
+    for senior managers.'
+  7: '**6-7: Market Competitor.** Offers "Trauma Team Silver" and corporate housing
+    for senior managers.'
+  8: '**8-9: Major Player.** Dominates a specific sector and can afford to extract
+    rival researchers through covert runs.'
+  9: '**8-9: Major Player.** Dominates a specific sector and can afford to extract
+    rival researchers through covert runs.'
+  10: '**10: Megacorp.** Global dominance with enough capital to rewrite city laws.
+    **Dr. Kaine''s** ultimate "Big Score" goal.'
+Security:
+  0: '**0-1: Negligent.** No cameras, unlocked doors, and no guards. Common in abandoned
+    cargo containers in **Tyger Claw** territory.'
+  1: '**0-1: Negligent.** No cameras, unlocked doors, and no guards. Common in abandoned
+    cargo containers in **Tyger Claw** territory.'
+  2: '**2-3: Neighborhood Watch.** A single "Rent-a-Cop" or low-level guard (Combat
+    Number 8) patrolling the block with a heavy pistol and Kevlar.'
+  3: '**2-3: Neighborhood Watch.** A single "Rent-a-Cop" or low-level guard (Combat
+    Number 8) patrolling the block with a heavy pistol and Kevlar.'
+  4: '**4-5: Corporate Standard.** Professional mook-level guards, basic turret systems,
+    and active camera monitoring.'
+  5: '**4-5: Corporate Standard.** Professional mook-level guards, basic turret systems,
+    and active camera monitoring.'
+  6: '**6-7: Tactical Presence.** Security officers in Heavy Armorjack (SP 13) with
+    assault rifles and automated internal defenses.'
+  7: '**6-7: Tactical Presence.** Security officers in Heavy Armorjack (SP 13) with
+    assault rifles and automated internal defenses.'
+  8: '**8-9: High-Threat.** Elite teams including Netrunners, bodyguards, and assassins.'
+  9: '**8-9: High-Threat.** Elite teams including Netrunners, bodyguards, and assassins.'
+  10: '**10: Fortress.** Military-grade mechs, AI-driven counter-intrusion, and multiple
+    redundant security layers that make infiltration nearly impossible.'

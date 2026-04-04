@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Night City - Time of the Red
-email: your-email@example.com
+email: sysadmin@datafortress.nc
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  NETWATCH MONITORING ACTIVE. You've jacked into the secure data fortress for our 
+  Cyberpunk Red campaign. Access classified intel on Night City's mega-corps, 
+  dossiers on street runners, and encrypted session archives. Stay frosty, choomba.
 baseurl: ""
 url: ""
 twitter_username: jekyllrb

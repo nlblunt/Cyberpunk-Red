@@ -32,11 +32,19 @@ process_files() {
         # Copy file
         cp "$file" "$target_file"
         
+        # Clean filename for title
+        clean_title=$(echo "${filename%.*}" | sed 's/^[0-9]\+[[:space:]]\+//')
+
         # Ensure front matter exists
         if ! grep -q "^---" "$target_file"; then
              # Add default front matter if missing
-             sed -i '1i---\nlayout: page\ntitle: '"${filename%.*}"'\n---\n' "$target_file"
+             sed -i '1i---\nlayout: page\ntitle: '"$clean_title"'\n---\n' "$target_file"
         fi
+
+        # Strip numerical prefix from H1 headers and front-matter title if they have it
+        sed -i 's/^title: [0-9]\+[[:space:]]\+/title: /' "$target_file"
+        sed -i 's/^# [0-9]\+[[:space:]]\+/# /' "$target_file"
+
         
         # Convert Wikilinks [[Link]] to [Link](/people/Link) - This is a simple approximation
         # We need a better strategy for linking between collections.
@@ -119,7 +127,9 @@ process_files "Session Recaps" "_session_recaps"
 enforce_layout "_session_recaps" "session_recap"
 
 python3 scripts/resolve_links.py
+python3 scripts/format_corporations.py
 python3 scripts/hide_secrets.py
 python3 scripts/format_players.py
+python3 scripts/parse_corporate_levels.py
 
 echo "Import complete."

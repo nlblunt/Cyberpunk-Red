@@ -2,6 +2,60 @@
 layout: default
 ---
 <article class="post person-profile">
+    <header class="post-header" style="margin-bottom: 20px; border-bottom: 1px solid #444; padding-bottom: 20px;">
+        <!-- Logic note: 
+             If page.name exists, we show Name (H1) and Title (Subtitle).
+             If only Title exists, we show Title (H1).
+        -->
+        {% if page.name %}
+        <h1 class="post-title" style="margin-bottom: 0;">{{ page.name }}</h1>
+        <p style="font-size: 1.2em; color: #aaa;"><strong>{{ page.title }}</strong></p>
+        {% else %}
+        <h1 class="post-title" style="margin-bottom: 0;">{{ page.title }}</h1>
+        {% endif %}
+
+        {% if page.corporation %}
+        <p><strong>Corporation:</strong> <em>{{ page.corporation }}</em></p>
+        {% endif %}
+
+        {% if page.contact == true %}
+        <div class="stats"
+            style="margin-top: 15px; width: 100%; max-width: 400px; padding: 10px; background: #222; border-radius: 4px;">
+            <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                <span
+                    style="background: #efce3b; color: #000; padding: 2px 6px; font-size: 0.9em; font-weight: bold; border-radius: 2px;">CONTACT</span>
+                {% if page.contact_person %}
+                <span style="color: #aaa; font-size: 0.9em;">for <strong>{{ page.contact_person }}</strong></span>
+                {% endif %}
+            </div>
+            <div class="stat-row" style="margin-bottom: 8px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 4px;">
+                    <span>Loyalty</span>
+                    <span>{{ page.loyalty }}/10</span>
+                </div>
+                <div style="background: #444; height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="background: #e74c3c; height: 100%; width: {{ page.loyalty | times: 10 }}%;"></div>
+                </div>
+            </div>
+            <div class="stat-row">
+                <div style="display: flex; justify-content: space-between; font-size: 0.9em; margin-bottom: 4px;">
+                    <span>Connection</span>
+                    <span>{{ page.connection }}/10</span>
+                </div>
+                <div style="background: #444; height: 8px; border-radius: 4px; overflow: hidden;">
+                    <div style="background: #3498db; height: 100%; width: {{ page.connection | times: 10 }}%;"></div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <style>
+            /* Hide the first H1 in content as it's often a duplicate of the page title/header we just rendered */
+            .person-profile .post-content>h1:first-child {
+                display: none;
+            }
+        </style>
+    </header>
 
     <div class="post-content">
         {{ content }}

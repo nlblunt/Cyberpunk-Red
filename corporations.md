@@ -11,7 +11,8 @@ permalink: /corporations/
 </div>
 
 <div class="grid-container">
-{% for corporation in site.corporations %}
+{% assign known_corps = site.corporations | where: "known", true %}
+{% for corporation in known_corps %}
   <div class="card">
     <h3><a href="{{ corporation.url | relative_url }}">{{ corporation.title }}</a></h3>
     <p>{{ corporation.excerpt | strip_html | truncatewords: 20 }}</p>

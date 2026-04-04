@@ -1,0 +1,93 @@
+<style>
+    .info-icon-container {
+        position: relative;
+        display: inline-block;
+        cursor: help;
+        margin-left: 5px;
+        color: #f1c40f;
+        font-weight: bold;
+    }
+
+    .info-tooltip {
+        visibility: hidden;
+        width: 250px;
+        background-color: #222;
+        color: #fff;
+        text-align: left;
+        border: 1px solid #f1c40f;
+        border-radius: 4px;
+        padding: 10px;
+        position: absolute;
+        z-index: 100;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -125px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 0.85em;
+        font-weight: normal;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .info-icon-container:hover .info-tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+
+{% if page.discovered_details %}
+<div class="discovered-details"
+    style="margin-bottom: 30px; padding: 20px; background: rgba(0,0,0,0.2); border: 1px solid #333; border-radius: 4px;">
+    <details>
+        <summary style="cursor: pointer; outline: none; margin-bottom: 10px;">
+            <h2 style="display: inline-block; margin: 0; font-size: 1.5em; border-bottom: none;">Discovered Details</h2>
+        </summary>
+        <div style="margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            {% for item in page.discovered_details %}
+            <div class="stat-row" style="margin-bottom: 0;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px; flex-wrap: wrap;">
+                    <span style="margin-right: 10px;">
+                        <strong>{{ item.label }}</strong>
+
+                        {% assign label_down = item.label | downcase %}
+                        {% assign level_desc = nil %}
+
+                        {% for corp_level in site.data.corporate_levels %}
+                        {% assign corp_level_down = corp_level[0] | downcase %}
+                        {% if corp_level_down == label_down %}
+                        {% assign level_desc = corp_level[1][item.value] %}
+                        {% endif %}
+                        {% endfor %}
+
+                        {% if level_desc and item.is_unknown != true %}
+                        <div class="info-icon-container">
+                            &#9432;
+                            <span class="info-tooltip">{{ level_desc | markdownify | remove: '<p>' | remove: '</p>'
+                                }}</span>
+                        </div>
+                        {% endif %}
+                        :
+
+                        {% unless item.is_unknown %}{{ item.note | markdownify | remove: '<p>' | remove: '</p>' }}{%
+                        endunless %}
+                    </span>
+                    <span style="font-family: monospace;">{% if item.is_unknown %}?{% else %}{{ item.value }}{% endif
+                        %}/{{
+                        item.max }}</span>
+                </div>
+                <div style="background: #333; height: 10px; border-radius: 5px; overflow: hidden;">
+                    {% if item.is_unknown %}
+                    <div style="width: 0%;"></div>
+                    {% else %}
+                    {% assign percent = item.value | times: 100.0 | divided_by: item.max %}
+                    <div
+                        style="background: linear-gradient(90deg, #e74c3c, #f1c40f); height: 100%; width: {{ percent }}%;">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </details>
+</div>
+{% endif %}

@@ -4,7 +4,14 @@ layout: default
 <article class="post corporation-profile">
 
     <div class="post-content">
-        {{ content }}
+
+
+        {% if page.known == true %}
+            {{ content }}
+        {% else %}
+            <h1>Access Denied</h1>
+            <p>This corporation's data is currently classified or unknown to the party.</p>
+        {% endif %}
     </div>
 
 </article>
