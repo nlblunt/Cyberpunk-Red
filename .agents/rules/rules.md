@@ -25,3 +25,9 @@ trigger: always_on
 ## Content Formatting
 * **Callouts & Admonitions:** Obsidian uses `> [!info]` syntax for callouts. Only use this syntax if the Jekyll site has a corresponding markdown processor or plugin to render them. Otherwise, use standard blockquotes `>`.
 * **Footnotes:** Use standard Markdown footnote syntax (`[^1]` and `[^1]:`). Both Obsidian and Jekyll's default Kramdown processor support this natively.
+
+## Script & Pipeline Management
+* **Follow the README:** Always refer to and follow the documentation in `scripts/README.md` for proper command usage and sequence.
+* **Pipeline Integrity:** Use `bash scripts/import_obsidian.sh` as the primary entry point for all reimports to ensure all Python post-processors (link resolution, secret hiding, player formatting) are executed.
+* **Documentation Hygiene:** If new scripts are added or existing pipeline logic is modified, the `scripts/README.md` must be updated immediately to reflect the current state.
+* **Preservation:** Do not delete scripts marked as obsolete in the README to maintain historical context and reverse-compatibility.
