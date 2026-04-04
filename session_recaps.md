@@ -11,12 +11,12 @@ permalink: /session_recaps/
 </div>
 
 <div class="grid-container">
-{% assign sorted_recaps = site.session_recaps | sort: 'real_date' | reverse %}
+{% assign sorted_recaps = site.session_recaps | sort: 'in_game_date' | reverse %}
 {% for recap in sorted_recaps %}
   <div class="card">
     <a href="{{ recap.url | relative_url }}" style="text-decoration: none; color: inherit;">
       <h4>{{ recap.title }}</h4>
-      <p><strong>{{ recap.real_date | date: "%m/%d/%Y" }}</strong></p>
+      <p><strong>{{ recap.in_game_date | date: "%m/%d/%Y" }}</strong></p>
       <p><em>
         {% if recap.mission.size > 0 %}
           {{ recap.mission | join: ", " }}
