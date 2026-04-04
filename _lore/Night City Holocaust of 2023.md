@@ -1,9 +1,9 @@
 ---
+title: "Night City Holocaust"
 layout: lore
-title: Night City Holocaust of 2023
 ---
 
-# Night City Holocaust (2023)
+# Night City Holocaust
 
 The Night City Holocaust, also known as the AHQ Disaster, was the cataclysmic event that ended the 4th Corporate War and defined the transition into the "Time of the Red."
 
