@@ -288,16 +288,6 @@ def main():
     compile_pdf("Plot Outline & Operations", [("Plot", os.path.join(VAULT_DIR, "Plot"))], "_PLOT.pdf")
     compile_pdf("Session Recaps Log", [("Session Recaps", os.path.join(VAULT_DIR, "Session Recaps"))], "_SESSION RECAPS.pdf")
     
-    # Combined report containing everything
-    all_sections = [
-        ("Plot and Missions", os.path.join(VAULT_DIR, "Plot")),
-        ("Players (The Crew)", os.path.join(VAULT_DIR, "Players")),
-        ("Corporations", os.path.join(VAULT_DIR, "Corporations")),
-        ("Session Recaps", os.path.join(VAULT_DIR, "Session Recaps")),
-        ("People Dossiers", os.path.join(VAULT_DIR, "People")),
-    ]
-    compile_pdf("Complete Campaign Compendium", all_sections, "_PLOTS.pdf")
-    
     # Cleanup temp HTML
     if os.path.exists(TEMP_HTML):
         os.remove(TEMP_HTML)
