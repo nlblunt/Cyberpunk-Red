@@ -1,10 +1,11 @@
 import os
 import re
 import subprocess
+import shutil
 
 VAULT_DIR = "obsidian_vault"
-OUTPUT_HTML = "scratch/combined_document.html"
-OUTPUT_PDF = os.path.join(VAULT_DIR, "NotebookLM", "_plots.pdf")
+NOTEBOOKLM_DIR = os.path.join(VAULT_DIR, "NotebookLM")
+TEMP_HTML = "scratch/combined_document.html"
 
 # CSS styling for a clean, professional book-style PDF
 CSS_STYLE = """
@@ -209,42 +210,31 @@ def gather_markdown_files(directory):
                 files_list.append(os.path.join(root, file))
     return files_list
 
-def main():
-    print("Generating Campaign PDF compiler...")
-    
-    os.makedirs("scratch", exist_ok=True)
-    
+def generate_section_html(title, sections):
     html_content = []
     html_content.append("<!DOCTYPE html><html><head><meta charset='utf-8'>")
     html_content.append(CSS_STYLE)
     html_content.append("</head><body>")
     
-    # 1. Cover Page
+    # Cover Page
     html_content.append("<div class='cover-page'>")
-    html_content.append("<h1 class='cover-title'>Cyberpunk Red</h1>")
-    html_content.append("<div class='subtitle'>Campaign Operational & Lore Compendium</div>")
+    html_content.append(f"<h1 class='cover-title'>{title}</h1>")
+    html_content.append("<div class='subtitle'>Campaign Intelligence Report</div>")
     html_content.append("<div class='meta'>Generated from GM Vault Database</div>")
     html_content.append("</div>")
-    
-    sections = [
-        ("Plot and Missions", os.path.join(VAULT_DIR, "Plot")),
-        ("Players (The Crew)", os.path.join(VAULT_DIR, "Players")),
-        ("Corporations", os.path.join(VAULT_DIR, "Corporations")),
-        ("Session Recaps", os.path.join(VAULT_DIR, "Session Recaps")),
-    ]
     
     for section_title, path in sections:
         if not os.path.exists(path):
             print(f"Skipping section: {section_title} (directory {path} not found)")
             continue
             
-        print(f"Compiling section: {section_title}...")
+        print(f"  Compiling section: {section_title}...")
         html_content.append(f"<h1 class='section-header'>{section_title}</h1>")
         
         md_files = gather_markdown_files(path)
         for md_file in md_files:
             filename = os.path.basename(md_file)
-            print(f"  Processing {filename}...")
+            print(f"    Processing {filename}...")
             
             with open(md_file, 'r', encoding='utf-8') as f:
                 content = f.read()
@@ -254,33 +244,64 @@ def main():
             html_content.append(md_to_html(content))
             
     html_content.append("</body></html>")
+    return "\n".join(html_content)
+
+def compile_pdf(title, sections, output_filename):
+    print(f"Compiling PDF: {output_filename} ({title})...")
     
-    with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
-        f.write("\n".join(html_content))
+    # Generate temporary HTML
+    html_text = generate_section_html(title, sections)
+    with open(TEMP_HTML, 'w', encoding='utf-8') as f:
+        f.write(html_text)
         
-    print(f"Combined HTML document created at {OUTPUT_HTML}")
-    print("Converting HTML to PDF via LibreOffice...")
-    
+    # Convert HTML to PDF via LibreOffice
     try:
         cmd = [
             "libreoffice",
             "--headless",
             "--convert-to", "pdf",
-            OUTPUT_HTML,
+            TEMP_HTML,
             "--outdir", "."
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         
-        # Rename/move the output PDF if it took the name of the HTML file
-        generated_pdf = OUTPUT_HTML.replace(".html", ".pdf")
+        # Move the output PDF to NotebookLM target folder
+        generated_pdf = TEMP_HTML.replace(".html", ".pdf")
         generated_pdf_basename = os.path.basename(generated_pdf)
+        dest_pdf = os.path.join(NOTEBOOKLM_DIR, output_filename)
+        
         if os.path.exists(generated_pdf_basename):
-            import shutil
-            shutil.move(generated_pdf_basename, OUTPUT_PDF)
+            shutil.move(generated_pdf_basename, dest_pdf)
             
-        print(f"Successfully generated campaign compendium at: {OUTPUT_PDF}")
+        print(f"Successfully generated PDF: {dest_pdf}")
     except Exception as e:
-        print(f"Error converting to PDF: {e}")
+        print(f"Error compiling {output_filename}: {e}")
+
+def main():
+    os.makedirs("scratch", exist_ok=True)
+    os.makedirs(NOTEBOOKLM_DIR, exist_ok=True)
+    
+    # Individual reports
+    compile_pdf("Corporations Report", [("Corporations", os.path.join(VAULT_DIR, "Corporations"))], "_CORPORATIONS.pdf")
+    compile_pdf("People Dossiers", [("People", os.path.join(VAULT_DIR, "People"))], "_PEOPLE.pdf")
+    compile_pdf("Player Characters", [("Players", os.path.join(VAULT_DIR, "Players"))], "_PLAYERS.pdf")
+    compile_pdf("Plot Outline & Operations", [("Plot", os.path.join(VAULT_DIR, "Plot"))], "_PLOT.pdf")
+    compile_pdf("Session Recaps Log", [("Session Recaps", os.path.join(VAULT_DIR, "Session Recaps"))], "_SESSION RECAPS.pdf")
+    
+    # Combined report containing everything
+    all_sections = [
+        ("Plot and Missions", os.path.join(VAULT_DIR, "Plot")),
+        ("Players (The Crew)", os.path.join(VAULT_DIR, "Players")),
+        ("Corporations", os.path.join(VAULT_DIR, "Corporations")),
+        ("Session Recaps", os.path.join(VAULT_DIR, "Session Recaps")),
+        ("People Dossiers", os.path.join(VAULT_DIR, "People")),
+    ]
+    compile_pdf("Complete Campaign Compendium", all_sections, "_PLOTS.pdf")
+    
+    # Cleanup temp HTML
+    if os.path.exists(TEMP_HTML):
+        os.remove(TEMP_HTML)
+    print("All PDF compilations complete.")
 
 if __name__ == "__main__":
     main()
