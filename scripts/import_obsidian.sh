@@ -12,7 +12,7 @@ if [ ! -d "$VAULT_DIR" ]; then
 fi
 
 echo "Cleaning up old collections..."
-rm -rf _corporations/* _people/* _players/* _lore/* _session_recaps/*
+rm -rf _corporations/* _people/* _players/* _lore/* _session_recaps/* _missions/*
 
 # Function to process and copy files
 process_files() {
@@ -126,6 +126,12 @@ enforce_layout "_lore" "lore"
 process_files "Session Recaps" "_session_recaps"
 enforce_layout "_session_recaps" "session_recap"
 
+process_files "Plot/Main Missions" "_missions"
+process_files "Plot/Progression Missions" "_missions"
+process_files "Plot/Side Missions" "_missions"
+enforce_layout "_missions" "mission"
+
+python3 scripts/format_missions.py
 python3 scripts/resolve_links.py
 python3 scripts/format_corporations.py
 python3 scripts/hide_secrets.py

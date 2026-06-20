@@ -14,16 +14,10 @@ permalink: /session_recaps/
 {% assign sorted_recaps = site.session_recaps | sort: 'in_game_date' | reverse %}
 {% for recap in sorted_recaps %}
   <div class="card">
-    <a href="{{ recap.url | relative_url }}" style="text-decoration: none; color: inherit;">
+    <a href="{{ recap.url | relative_url }}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; flex-grow: 1;">
       <h4>{{ recap.title }}</h4>
       <p><strong>{{ recap.in_game_date | date: "%m/%d/%Y" }}</strong></p>
-      <p><em>
-        {% if recap.mission.size > 0 %}
-          {{ recap.mission | join: ", " }}
-        {% else %}
-          {{ recap.mission }}
-        {% endif %}
-      </em></p>
+      
       <div class="excerpt">
         <div class="excerpt-content">
           {% if recap.excerpt %}
@@ -34,6 +28,18 @@ permalink: /session_recaps/
         </div>
       </div>
     </a>
+    {% if recap.mission %}
+    <div style="margin-top: auto; padding-top: 10px; z-index: 5; position: relative;">
+      <p><em>
+        <strong>Mission:</strong>
+        {% if recap.mission.size > 0 %}
+          {{ recap.mission | join: ", " | markdownify | remove: '<p>' | remove: '</p>' }}
+        {% else %}
+          {{ recap.mission | markdownify | remove: '<p>' | remove: '</p>' }}
+        {% endif %}
+      </em></p>
+    </div>
+    {% endif %}
   </div>
 {% endfor %}
 </div>

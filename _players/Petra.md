@@ -186,13 +186,13 @@ title: Petra
 ### Acquaintances
 None
 ### Friends
-#### [Booma Rang]({% link _people/Booma Rang.md %}) (Male)
+#### [Fixer]({% link _people/Booma Rang.md %}) (Male)
 **Role**: Fixer
 **Living Location:** Outskirts
 **Meeting Location:** Outskirt Convoy Rest Stop
 **Personality:** Paranoid
 **Nomad Group:** Snake Nation, Infrastructure maintenance and train operation specialist
-#### [Neuro]({% link _people/Neuro.md %}) (Male)
+#### [Netrunner]({% link _people/Neuro.md %}) (Male)
 **Role**: Netrunner
 **Living Location**: NorCal Military Base
 **Nomad Group:** Jades, Construction, transport, and agriculture labor

@@ -9,9 +9,9 @@ layout: default
             <p><strong>In-Game Date:</strong> {{ page.in_game_date | date: "%m/%d/%Y" }}</p>
             <p><strong>Mission:</strong>
                 {% if page.mission.size > 0 %}
-                {{ page.mission | join: ", " }}
+                {{ page.mission | join: ", " | markdownify | remove: '<p>' | remove: '</p>' }}
                 {% else %}
-                {{ page.mission }}
+                {{ page.mission | markdownify | remove: '<p>' | remove: '</p>' }}
                 {% endif %}
             </p>
         </div>

@@ -2,24 +2,24 @@
 layout: session_recap
 title: Following the Paper Trail
 real_date: 2025-11-23
-in_game_date: 2045-06-10
+in_game_date: 2045-06-01
+in_game_date_end: 2045-06-01
 mission:
-  - The Unscheduled Contribution
-  - The Missing Employee
+  - "[The Missing Employee](/missions/SM01 The Missing Employee.html)"
+  - "[The Unscheduled Contribution](/missions/PM01 The Unscheduled Contribution.html)"
 ---
-# Following the Paper Trail
-## Excerpt
-The players discovered an identification badge belonging to Sam, an employee of Neuro-Chem Labs, inside an abandoned cargo container and quickly learned Sam’s reported departure was a fabrication. Their investigation led them to a disturbing scene at Sam’s residence and ultimately to a Piranha gang gathering at a derelict dock, hinting at a larger, covert operation.
+## 02 FOLLOWING THE PAPER TRAIL
 
-## Session Summary
-The players, seeking refuge, discovered an abandoned and locked cargo container within territory controlled by the Tyger Claws. Inside, they found an identification badge belonging to Sam, an employee of a company called Neuro-Chem Labs. A quick search revealed Neuro-Chem Labs to be a recently established, small firm located nearby.
+### EXCERPT
 
-The party decided to return the badge and traveled to Neuro-Chem Labs. They requested to speak with the manager, Max, but he reacted negatively to their arrival and claimed Sam had called in sick and then quit several days prior. Petra, however, detected deception in Max’s statement. 
+The players discovered an identification badge belonging to Sam, an employee of [Neuro-Chem Labs]({% link _corporations/Neuro-Chem Labs.md %}), inside an abandoned cargo container and quickly learned Sam's reported departure was a fabrication. Their investigation led them to a disturbing scene at Sam's residence and ultimately to a Piranha gang gathering at a derelict dock, hinting at a larger, covert operation.
 
-A brief conversation with the receptionist proved fruitful. She provided Petra with Sam’s employee file, along with a separate, anonymous note indicating the receptionist also believed Max was lying. 
+### SESSION SUMMARY
 
-Following this lead, the party investigated Sam’s cargo container residence and found a disturbing scene: a puddle of blood and overturned furniture. They concluded Sam had likely been either killed or abducted. A crumpled piece of paper discovered at the scene contained an address and a date from a few days earlier.
-
-The address led them to an abandoned warehouse at a derelict dock. Inside, they uncovered evidence of a Piranha gang gathering, as well as signs that a shipment had recently arrived via the river. 
-
-To learn more about the potential shipment, Petra contacted her Netrunner connection, Neuro, requesting information about any covert deliveries in the area. Neuro agreed to investigate.
+- **Container Clues:** Seeking refuge, the players discovered an abandoned and locked cargo container nestled within territory controlled by the Tyger Claws. Inside, they salvaged an identification badge belonging to Sam, an employee of a small, recently established firm located nearby called [Neuro-Chem Labs]({% link _corporations/Neuro-Chem Labs.md %}).
+    
+- **Corporate Deception:** The party traveled to [Neuro-Chem Labs]({% link _corporations/Neuro-Chem Labs.md %}) to return the badge and spoke with the manager, Max. Max reacted defensively, claiming Sam had called in sick and abruptly quit days ago , but Petra instantly detected deception in his statement. This suspicion was confirmed by the receptionist, who slipped Petra Sam's employee file alongside an anonymous note stating she also believed Max was lying.
+    
+- **A Bloody Scene:** Following the trail to Sam's actual cargo container residence, the crew walked into a disturbing scene featuring overturned furniture and a fresh puddle of blood. Concluding that Sam had been killed or abducted, they searched the room and found a crumpled piece of paper containing a date and an address from a few days prior.
+    
+- **The Derelict Docks:** The address brought the party to an abandoned warehouse at a derelict dock. Inside, they uncovered clear evidence of a Piranha gang gathering and signs of a recent covert river shipment , prompting Petra to contact her Netrunner connection, Neuro, to dig up details on the illegal deliveries.

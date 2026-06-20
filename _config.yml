@@ -30,6 +30,7 @@ header_pages:
   - players.md
   - lore.md
   - session_recaps.md
+  - missions.md
 
 # Build settings
 markdown: kramdown
@@ -48,6 +49,8 @@ collections:
   lore:
     output: true
   session_recaps:
+    output: true
+  missions:
     output: true
 
 exclude:

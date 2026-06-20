@@ -7,6 +7,7 @@ contact: false
 loyalty: 0
 connection: 0
 known: true
+status: Dead
 ---
 # Max Kruger
 ## Snapshot

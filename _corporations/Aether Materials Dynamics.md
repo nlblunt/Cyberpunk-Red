@@ -1,7 +1,7 @@
 ---
 layout: corporation
 title: Aether Materials Dynamics
-known: false
+known: true
 discovered_details:
   - label: "Security"
     value: 0
@@ -30,7 +30,7 @@ discovered_details:
     is_unknown: true
 ---
 # Aether Materials Dynamics
-**Aether Materials Dynamics (AMD)** is a newly established Neocorp focused on rapid urban development solutions. They are moving into Night City to take advantage of the massive rebuilding effort following the [Night City Holocaust of 2023]({% link _lore/Night City Holocaust of 2023.md %}).
+**Aether Materials Dynamics (AMD)** is a newly established Neocorp focused on rapid urban development solutions. They are moving into Night City to take advantage of the massive rebuilding effort following the [Night City Holocaust]({% link _lore/Night City Holocaust of 2023.md %}).
 
 {% include discovered_details.html %}
 
@@ -43,6 +43,6 @@ discovered_details:
 - **Corporate Philosophy:** AMD operates with aggressive efficiency, believing that profit and order are achieved by moving faster than the competition. Like all ambitious firms in the savage world of Big Business, they recognize that assassination and kidnapping are expected, especially when pursuing key personnel from rival firms.
 
 ## People
-**CEO**: [Dr Vivian Kaine]({% link _people/Dr Vivian Kaine.md %})
+**CEO**: [Chief Executive Officer]({% link _people/Vivian Kaine.md %})
 
 ## Player Party Interactions

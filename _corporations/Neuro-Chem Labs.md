@@ -4,9 +4,9 @@ title: Neuro-Chem Labs
 known: true
 discovered_details:
   - label: "Security"
-    value: 5
+    value: 3
     max: 10
-    note: "**Corporate Standard**"
+    note: "**Neightborhood Watch**"
   - label: "Police response time"
     value: 5
     max: 10
@@ -17,11 +17,6 @@ discovered_details:
     note: ""
     is_unknown: true
   - label: "Resources"
-    value: 0
-    max: 10
-    note: ""
-    is_unknown: true
-  - label: "Players Reputations"
     value: 0
     max: 10
     note: ""
@@ -42,6 +37,6 @@ discovered_details:
 - **Corporate Philosophy:** Innovation for the Human Element
 
 ## People
-- [Max Kruger]({% link _people/Max Kruger.md %}), Manager (Exec)
-- [Sam Ishida]({% link _people/Sam Ishida.md %}), Employee (Medtech)
+- ~~[Manager]({% link _people/Max Kruger.md %}), Manager (Exec)~~ Dead 06/03/2045
+- [Manager]({% link _people/Sam Ishida.md %}), Manager (Medtech)
 

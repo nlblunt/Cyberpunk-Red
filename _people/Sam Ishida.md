@@ -1,12 +1,13 @@
 ---
 layout: person
 name: Sam Ishida
-title: Employee
+title: Manager
 corporation: Neuro-Chem Labs
 contact: false
 loyalty: 0
 connection: 0
 known: true
+status: Alive
 ---
 # Sam Ishida
 ## Snapshot

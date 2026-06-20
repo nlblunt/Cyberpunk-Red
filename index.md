@@ -29,6 +29,10 @@ This is the data fortress for our Cyberpunk Red campaign. Access global database
         <p>World history, settings, and flavor.</p>
     </div>
     <div class="card">
+        <h3><a href="{{ '/missions' | relative_url }}">Missions</a></h3>
+        <p>Operational dossiers and status tracker.</p>
+    </div>
+    <div class="card">
         <h3><a href="{{ '/session_recaps' | relative_url }}">Recaps</a></h3>
         <p>Previous session logs and archive.</p>
     </div>

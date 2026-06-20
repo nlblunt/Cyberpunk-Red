@@ -2,11 +2,13 @@
 layout: person
 title: Chief Executive Officer
 name: Dr Vivian V Kaine
+alias: Dr Kaine
 corporation: Aether Materials Dynamics
 contact: false
 loyalty: 0
 connection: 0
 known: false
+status: Alive
 ---
 
 # Chief Executive Officer: Dr. Vivian "V" Kaine

@@ -1,9 +1,9 @@
 ---
 layout: player
-title: Pierce
+title: Piece
 ---
 
-# Pierce
+# Piece
 ## Info
 **Role** Tech, Rank 4
 
