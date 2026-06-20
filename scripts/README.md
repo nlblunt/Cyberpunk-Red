@@ -22,8 +22,9 @@ The core import process is orchestrated by `import_obsidian.sh`, which cleans th
 
 | Script | Language | Purpose | Status |
 |:---|:---|:---|:---|
-| `standardize_lore.py` | Python | **New.** Normalizes headers, adds front matter, and cleans sub-headers in the source Obsidian vault. | **Active** (Source Maintenance) |
-| `test_regex.py` | Python | Used for testing and debugging complex regex patterns used in the formatting scripts. | **Obsolete** (Utility/Debug) |
+| `standardize_lore.py` | Python | **Active.** Normalizes headers, adds front matter, and cleans sub-headers in the source Obsidian vault. | **Active** (Source Maintenance) |
+| `generate_pdf.py` | Python | **Active.** Compiles plots, players, corporations, and recaps from the vault into `_plots.pdf` using LibreOffice. | **Active** (Document Compilation) |
+| `test_regex.py` | Python | Used for testing and debugging complex regex patterns. | **Obsolete** (Utility/Debug) |
 
 ---
 
@@ -38,6 +39,10 @@ The core import process is orchestrated by `import_obsidian.sh`, which cleans th
    python3 scripts/standardize_lore.py
    ```
    *Note: This modifies files in `obsidian_vault/Lore/` directly.*
+3. **Generate Campaign Compendium PDF**: To compile all campaign data (plots, players, corporations, session recaps) into a single unified `_plots.pdf` document:
+   ```bash
+   python3 scripts/generate_pdf.py
+   ```
 
 ## Maintenance Rules
 - **Do not delete obsolete scripts**: Keep them for reference or potential future use.
