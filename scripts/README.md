@@ -30,16 +30,20 @@ The core import process is orchestrated by `import_obsidian.sh`, which cleans th
 
 ## Usage Instructions
 
-1. **Full Reimport**: To perform a complete refresh of the site content from the vault, run:
+1. **Interactive Tool Menu (Recommended)**: To run any tool or compilation script interactively, use the root-level launcher:
+   ```bash
+   ./run.sh
+   ```
+2. **Full Reimport**: To perform a complete refresh of the site content from the vault manually, run:
    ```bash
    bash scripts/import_obsidian.sh
    ```
-2. **Lore Standardization**: To clean up formatting specifically in the Obsidian vault's Lore folder:
+3. **Lore Standardization**: To clean up formatting specifically in the Obsidian vault's Lore folder:
    ```bash
    python3 scripts/standardize_lore.py
    ```
    *Note: This modifies files in `obsidian_vault/Lore/` directly.*
-3. **Generate Campaign Compendium PDF**: To compile all campaign data (plots, players, corporations, session recaps) into a single unified `_plots.pdf` document:
+4. **Generate NotebookLM PDFs**: To compile campaign details (plots, players, corporations, session recaps) into separate PDF dossiers under the vault's `NotebookLM` folder:
    ```bash
    python3 scripts/generate_pdf.py
    ```
