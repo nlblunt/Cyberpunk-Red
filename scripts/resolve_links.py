@@ -31,7 +31,7 @@ def build_file_map():
                             if len(parts) >= 3:
                                 front_matter = yaml.safe_load(parts[1])
                                 if front_matter:
-                                    title = front_matter.get('title') or front_matter.get('name')
+                                    title = front_matter.get('name') or front_matter.get('title')
                                     if title:
                                         path_title_map[path] = title
                                         file_map[title.lower()] = path

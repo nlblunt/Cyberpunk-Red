@@ -37,6 +37,6 @@ discovered_details:
 - **Corporate Philosophy:** Innovation for the Human Element
 
 ## People
-- ~~[Manager]({% link _people/Max Kruger.md %}), Manager (Exec)~~ Dead 06/03/2045
-- [Manager]({% link _people/Sam Ishida.md %}), Manager (Medtech)
+- ~~[Max Kruger]({% link _people/Max Kruger.md %}), Manager (Exec)~~ Dead 06/03/2045
+- [Sam Ishida]({% link _people/Sam Ishida.md %}), Manager (Medtech)
 

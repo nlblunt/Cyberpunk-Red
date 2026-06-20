@@ -11,7 +11,7 @@ mission:
 
 ### EXCERPT
 
-Staring down the barrel of corporate execution, the crew chose the lesser of two evils and accepted Dr. [Chief Executive Officer]({% link _people/Vivian Kaine.md %})'s grim job offer. Now operating under the megacorp's shadow, they've been tasked with a high-stakes asset recovery mission: liberating a proprietary processor chip from a Prototype Vendit machine nestled deep within a heavily guarded Continental Brands warehouse.
+Staring down the barrel of corporate execution, the crew chose the lesser of two evils and accepted Dr. [Dr Vivian V Kaine]({% link _people/Vivian Kaine.md %})'s grim job offer. Now operating under the megacorp's shadow, they've been tasked with a high-stakes asset recovery mission: liberating a proprietary processor chip from a Prototype Vendit machine nestled deep within a heavily guarded Continental Brands warehouse.
 
 ### SESSION SUMMARY
 

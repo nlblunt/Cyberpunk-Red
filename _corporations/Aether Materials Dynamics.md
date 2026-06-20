@@ -43,6 +43,6 @@ discovered_details:
 - **Corporate Philosophy:** AMD operates with aggressive efficiency, believing that profit and order are achieved by moving faster than the competition. Like all ambitious firms in the savage world of Big Business, they recognize that assassination and kidnapping are expected, especially when pursuing key personnel from rival firms.
 
 ## People
-**CEO**: [Chief Executive Officer]({% link _people/Vivian Kaine.md %})
+**CEO**: [Dr Vivian V Kaine]({% link _people/Vivian Kaine.md %})
 
 ## Player Party Interactions

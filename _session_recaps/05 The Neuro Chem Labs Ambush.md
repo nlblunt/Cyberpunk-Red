@@ -11,7 +11,7 @@ mission:
 
 ### EXCERPT
 
-What began as a midnight heist into [Neuro-Chem Labs]({% link _corporations/Neuro-Chem Labs.md %}) to clear an innocent man’s name derailed into a corporate execution when security operatives turned their weapons on Max Kruger. Disarmed by an EMP blast and dragged before the clinical Dr. [Chief Executive Officer]({% link _people/Vivian Kaine.md %}), the crew faces a ruthless ultimatum: sell out to the megacorp, or share Kruger's fatal fate.
+What began as a midnight heist into [Neuro-Chem Labs]({% link _corporations/Neuro-Chem Labs.md %}) to clear an innocent man’s name derailed into a corporate execution when security operatives turned their weapons on Max Kruger. Disarmed by an EMP blast and dragged before the clinical Dr. [Dr Vivian V Kaine]({% link _people/Vivian Kaine.md %}), the crew faces a ruthless ultimatum: sell out to the megacorp, or share Kruger's fatal fate.
 
 ### SESSION SUMMARY
 
@@ -21,4 +21,4 @@ What began as a midnight heist into [Neuro-Chem Labs]({% link _corporations/Neur
     
 - **Total Blackout:** Before the party could react to the sudden execution, the corporate strike team deployed an EMP blast directly into the room. The pulse instantly shorted out and deactivated all of the crew's weapons, gear, and cyberware, leaving them completely subdued and disarmed.
     
-- **The Penthouse Ultimatum:** Bound and blind-jacked, the crew was escorted to a high-end, luxury penthouse overlooking Night City. There, they met their captor, Dr. [Chief Executive Officer]({% link _people/Vivian Kaine.md %}), who explained that Max was liquidated for being a liability. Impressed by the party's efficiency, she leveled a chilling ultimatum: sign on the dotted line to work for her, or suffer the exact same fatal fate as Max.
+- **The Penthouse Ultimatum:** Bound and blind-jacked, the crew was escorted to a high-end, luxury penthouse overlooking Night City. There, they met their captor, Dr. [Dr Vivian V Kaine]({% link _people/Vivian Kaine.md %}), who explained that Max was liquidated for being a liability. Impressed by the party's efficiency, she leveled a chilling ultimatum: sign on the dotted line to work for her, or suffer the exact same fatal fate as Max.
