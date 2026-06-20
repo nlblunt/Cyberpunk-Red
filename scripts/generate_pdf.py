@@ -4,7 +4,7 @@ import subprocess
 
 VAULT_DIR = "obsidian_vault"
 OUTPUT_HTML = "scratch/combined_document.html"
-OUTPUT_PDF = "_plots.pdf"
+OUTPUT_PDF = os.path.join(VAULT_DIR, "NotebookLM", "_plots.pdf")
 
 # CSS styling for a clean, professional book-style PDF
 CSS_STYLE = """
@@ -271,11 +271,12 @@ def main():
         ]
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         
-        # Rename the output PDF if it took the name of the HTML file
+        # Rename/move the output PDF if it took the name of the HTML file
         generated_pdf = OUTPUT_HTML.replace(".html", ".pdf")
         generated_pdf_basename = os.path.basename(generated_pdf)
         if os.path.exists(generated_pdf_basename):
-            os.rename(generated_pdf_basename, OUTPUT_PDF)
+            import shutil
+            shutil.move(generated_pdf_basename, OUTPUT_PDF)
             
         print(f"Successfully generated campaign compendium at: {OUTPUT_PDF}")
     except Exception as e:
