@@ -21,6 +21,10 @@ discovered_details:
     max: 10
     note: ""
     is_unknown: true
+  - label: "Players Reputations"
+    value: 6
+    max: 10
+    note: "**Trusted Contractor**"
 ---
 # Neuro-Chem Labs (NCL) Profile
 **Neuro-Chem Labs (NCL)** specializes in advanced pharmaceutical synthesis and research, operating as a Local Corp that often relies on Edgerunner resources to survive the competitive Night City market.
